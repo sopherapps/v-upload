@@ -1,36 +1,28 @@
 <template>
   <v-app>
-    <v-app-bar app>
+    <v-toolbar dark color="primary" app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span class="font-weight-light">V-Uploads</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
+      <v-btn flat href="https://github.com/sopherapps/v-upload" target="_blank">
+        <span class="mr-2">Github</span>
       </v-btn>
-    </v-app-bar>
+    </v-toolbar>
 
     <v-content>
-      <HelloWorld />
+      <Home />
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import Home from "./views/Home";
 
 export default {
   name: "App",
   components: {
-    HelloWorld
-  },
-  data: () => ({
-    //
-  })
+    Home
+  }
 };
 </script>
