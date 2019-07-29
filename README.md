@@ -1,4 +1,4 @@
-# v-upload [![Build Status](https://travis-ci.org/sopherapps/v-upload.svg?branch=master)](https://travis-ci.org/sopherapps/v-upload)
+# sopher-v-upload [![Build Status](https://travis-ci.org/sopherapps/v-upload.svg?branch=master)](https://travis-ci.org/sopherapps/v-upload)
 
 A collection of file upload components built on top of vuetify to allow drag and drop, normal file selection etc.
 
@@ -20,7 +20,7 @@ Checkout the [demo](https://sopherapps.github.io/v-upload/)
 1. You can get this as an NPM package in your app
 
    ```bash
-   npm install --save @tinitto/v-upload
+   npm install --save sopher-v-upload
    ```
 
 2. Go to your `vuetify.js` plugin file in your plugin folder (Vuetify is needed for this) and import and register some or all of the components from v-upload globally.

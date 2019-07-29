@@ -1,5 +1,5 @@
 {
-  "name": "@tinitto/v-upload",
+  "name": "sopher-v-upload",
   "version": "0.1.0",
   "private": false,
   "types": "./types/index.d.ts",
