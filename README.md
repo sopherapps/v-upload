@@ -1,4 +1,4 @@
-# v-upload
+# v-upload [![Build Status](https://travis-ci.org/sopherapps/v-upload.svg?branch=master)](https://travis-ci.org/sopherapps/v-upload)
 
 A collection of file upload components built on top of vuetify to allow drag and drop, normal file selection etc.
 
