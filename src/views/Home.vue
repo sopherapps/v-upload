@@ -68,23 +68,14 @@
         </v-flex>
       </template>
     </excel-sheet-upload>
-
-    <progress-circle
-      :progress-tracker="() => progress"
-      v-model="progressCircleVisible"
-      :message="statusMessage"
-      color="white"
-    />
   </div>
 </template>
 
 <script>
 import XLSX from "xlsx";
-import ProgressCircle from "../components/ProgressCircle";
 import ExcelSheetUpload from "../components/ExcelSheetUpload";
 export default {
   components: {
-    ProgressCircle,
     ExcelSheetUpload
   },
   data: () => ({
@@ -96,9 +87,6 @@ export default {
     services: ["users", "posts", "categories"],
     currentAction: "",
     actions: ["upload", "delete"],
-    progress: 0,
-    statusMessage: "",
-    progressCircleVisible: false,
     dialog: false
   }),
   computed: {
@@ -107,30 +95,23 @@ export default {
     }
   },
   methods: {
-    resetData() {
-      // alert("Data is being reset");
-    },
+    resetData() {},
     exportSheet() {
-      this.progress = 50;
       /* convert state to workbook */
       this.statusMessage = "Converting data to spreadsheet data...";
       const ws = XLSX.utils.aoa_to_sheet(this.excelSheet.data);
 
-      this.progress = 70;
       this.statusMessage = "Creating new spreadsheet to copy to...";
       const wb = XLSX.utils.book_new();
 
-      this.progress = 80;
       this.statusMessage =
         "Appending spreadsheet data to the new spreadsheet...";
       XLSX.utils.book_append_sheet(wb, ws, "SheetJS");
 
       /* generate file and send to client */
-      this.progress = 90;
       this.statusMessage = "Downloading spreadsheet...";
       XLSX.writeFile(wb, this.excelSheet.fileName);
       this.statusMessage = "Export complete.";
-      this.progress = 100;
     }
   }
 };
