@@ -9,7 +9,7 @@ Checkout the [demo](https://sopherapps.github.io/v-upload/)
 ## Dependencies
 
 1. [Vuejs +v2.6.10](https://vuejs.org)
-2. [Vuetify +v2.0.0](https://vuetifyjs.com)
+2. [Vuetify +v1.5.5](https://vuetifyjs.com) (not yet converted to v2.0)
 
 ## Usage
 
@@ -29,7 +29,7 @@ Checkout the [demo](https://sopherapps.github.io/v-upload/)
     import {VFileInput, VDragDropFileInput, VDropArea, VExcelFileUpload } from "v-upload";
 
     Vue.use(Vuetify, {
-      iconfont: "md"
+      iconfont: "mdi"
     });
 
     Vue.component("v-file-input", VFileInput);
@@ -62,7 +62,7 @@ The `v-file-input` receives props:
 - label (type: String)
   - label of the file input (Default: 'Upload')
 - prepend-icon (type: String)
-  - icon to prepend to the file input. (Default: 'attach_file')
+  - icon to prepend to the file input. (Default: 'mdi-attachment')
 - accept (type: String)
   - the file types to be accepted by the file input. (Default: 'doc,docx,pdf')
 
