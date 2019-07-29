@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+  - "10"
+
+install:
+  - npm install
+
+script:
+  - npm run test:unit
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  verbose: true
+  on:
+    branch: master
+
+before_deploy:
+  - npm run build
+  - touch dist/.nojekyll
