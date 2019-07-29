@@ -20,7 +20,7 @@ Checkout the [demo](https://sopherapps.github.io/v-upload/)
 1. You can get this as an NPM package in your app
 
    ```bash
-   npm install --save v-upload
+   npm install --save @tinitto/v-upload
    ```
 
 2. Go to your `vuetify.js` plugin file in your plugin folder (Vuetify is needed for this) and import and register some or all of the components from v-upload globally.
